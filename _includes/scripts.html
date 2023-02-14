@@ -1,0 +1,56 @@
+
+<script src="./PapaParse-5.0.2/papaparse.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+ //  var link = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSr00JMiSuM4qKHfChtIHrdxzf9OPOtA3XsFPLsXnuRDJ1DS2YHWoJU_qPUY5dFeFUBa-diUj60JaVk/pub?output=csv'          // this link should be replaced with the link retrieved earlier
+ var link = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRdHKm2abd0ff8wGENemQhFi5KlnSuAYrnlJEFeZ5MJGyvT-Ez2w_Ir8nzEpzOZyz5oPgmSQaMY44Ic/pub?gid=504018457&single=true&output=csv'
+
+function init() {
+      Papa.parse(link, {
+      download: true,
+      header: true,
+      complete: function(results) {
+        var data = results.data
+        console.log(data);
+        let date = moment();
+        let eventDate;
+        let formattedDate;
+
+        for (var i = 0; i < data.length; i++) {
+          eventDate = moment(data[i].Date, "DD/MM/YYYY");
+          if (!date.isSame(eventDate)) {
+            formattedDate = eventDate.format("ddd, Do MMMM");
+            $('#events').append(
+              '<div style="margin: 40px;" class="eventDate"><h4><span>' + formattedDate + '</span></h4></div>' +
+              '<div class="row event">' +
+              '<div class="col-sm-4 eventLeft" >' +
+                '<h5 id="time"><b>' + data[i].Time + '</b></h5></div>' +
+              '<div class="col-sm-6 eventRight">' +
+                '<h5 class="eventTitle">' + data[i].Title +  '</h5>' +
+                '<p>'+ data[i].Description + '</p>'
+            );
+            
+          } else {
+            $('#events').append(
+              '<div class="row event">' +
+              '<div class="col-sm-4 eventLeft" >' +
+                '<h5 id="time"><b>' + data[i].Time + '</b></h5></div>' +
+              '<div class="col-sm-6 eventRight">' +
+                '<h5 class="eventTitle">' + data[i].Title +  '</h5>' +
+                '<p>'+ data[i].Description + '</p>' 
+            );
+          }
+          date = eventDate;
+        }
+      }
+    })}
+    window.addEventListener('DOMContentLoaded', init)
+
+
+</script>

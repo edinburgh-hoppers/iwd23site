@@ -1,0 +1,60 @@
+{% assign nav-items = site.data.nav %}
+
+<nav class="sticky-top mt-3">
+  <div class="left">
+  {% for item in nav-items %}
+    {% if item.left %}
+      <a href='{{ item.href }}'>{{ item.text }}</a>
+    {% endif %}
+  {% endfor %}
+</div>
+  <img src="{{ '/assets/img/hoppers-logo.png' | relative_url }} ">
+<div class="right">
+  {% for item in nav-items %}
+    {% if item.right %}
+      <a href='{{ item.href }}'>{{ item.text }}</a>
+    {% endif %}
+  {% endfor %}
+</div>
+
+</nav>
+
+<script>
+  var threshold;
+  var disabled = false;
+  var nav = document.getElementsByTagName('nav')[0];
+  var listener1, listener2;
+  window.onload = function() {
+    threshold = 0;
+  }
+
+  window.onscroll = function(){
+    let currPos = document.getElementsByClassName('hero-section')[0].getBoundingClientRect().y;
+    if(currPos < threshold){
+      console.log("true")
+      nav.style.backgroundColor = "#3c0494ff";
+
+      document.querySelectorAll('nav a').forEach(e => {
+        e.classList.add('with-background');
+      //  listener1 = e.addEventListener("mouseenter", function( event ) {
+      //     event.target.style.color = "#3c0494ff";
+      // });
+      // listener2 = e.addEventListener("mouseleave", function( event ) {
+      //     event.target.style.color = "white";
+      // });
+    });
+  }
+    else{
+      disabled = false;
+      nav.style.backgroundColor = "transparent";
+      document.querySelectorAll('nav a').forEach(e => e.classList.remove('with-background'));
+      // listener1 = e.addEventListener("mouseenter", function( event ) {
+      //     event.target.style.color = "#3c0494ff";
+      // });
+      // listener2 = e.addEventListener("mouseleave", function( event ) {
+      //     event.target.style.color = "#3c0494ffe";
+      // });
+    }
+  }
+
+</script>

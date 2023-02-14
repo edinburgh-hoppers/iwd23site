@@ -1,0 +1,35 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  <head>
+  {% include head.html %}
+  </head>
+  <body>
+  {% include nav.html %}
+
+  <div class="">
+    <div class="hero-section">
+      <div class="background-wrapper">
+        <img src="{{ '/assets/img/ada-hack-logo-no-title.png' | relative_url }}">
+        <div class="text-wrapper">
+          <h1 class="mb-3 text-center">
+              {{ page.title }}
+          </h1>
+
+          {% if page.subtitle %}
+            <h2 class="text-center mb-3">{{ page.subtitle }}</h2>
+          {% endif %}
+          <!--<div class="reg-buttons">
+            <a href="https://form.jotform.com/212321898577062" target="_blank">Register as a mentor</a>
+            <a href="https://form.jotform.com/212463477826362" target="_blank">Register as a hacker</a>
+          </div> </!-->
+      </div>
+    </div>
+  </div>
+        {{ content }}
+  </div>
+
+  {% include footer.html %}
+  </body>
+</html>

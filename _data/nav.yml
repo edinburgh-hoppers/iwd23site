@@ -1,0 +1,19 @@
+- text: "About Us"
+  href: "#about"
+  left: yes
+
+- text: "Sponsors"
+  href: "#sponsors"
+  left: yes
+
+- text: "Schedule"
+  href: "#schedule"
+  right: yes
+
+- text: "FAQ"
+  href: "#faq"
+  right: yes
+
+
+
+

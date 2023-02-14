@@ -1,0 +1,34 @@
+{% assign faq = site.data.faq %}
+
+<style>
+ul.jekyllcodex_accordion {position: relative; margin: 1.4rem 0!important; border-bottom: 1px solid rgba(0,0,0,0.25); padding-bottom: 0;}
+ul.jekyllcodex_accordion li {border-top: 1px solid rgba(0,0,0,0.25); list-style: none; margin-left: 0;}
+ul.jekyllcodex_accordion li input {display: none;}
+ul.jekyllcodex_accordion li label {display: block; cursor: pointer; padding: 0.75rem 2.4rem 0.75rem 0; margin: 0;}
+ul.jekyllcodex_accordion li div {display: none; padding-bottom: 1.2rem;}
+ul.jekyllcodex_accordion li input:checked + label {font-weight: bold;}
+ul.jekyllcodex_accordion li input:checked + label + div {display: block;}
+ul.jekyllcodex_accordion li label::before {content: "+"; font-weight: normal; font-size: 130%; line-height: 1.1rem; padding: 0; position: absolute; right: 0.5rem; transition: all 0.15s ease-in-out;}
+ul.jekyllcodex_accordion li input:checked + label::before {transform: rotate(-45deg);}
+</style>
+
+<div id="faq" class="faq  container-fluid">
+    <h1>Frequently asked questions</h1>
+    <div class="wrapper">
+<ul class="jekyllcodex_accordion">
+    {% for item in faq %}
+    <div class="qanda container">     
+        <li><input id="accordion{{ forloop.index }}" type="checkbox" /><label for="accordion{{ forloop.index }}"><h4>Q: {{ item.title }}</h4></label><div><h5>A: {{ item.content  }}</h5></div></li>
+    </div>
+    {% endfor %}  
+
+    
+    <div class="qanda container"></div>
+        <h4>Couldn't find an answer to your questions? Please contact us on <a href="mailto:edinburghhoppers@gmail.com "
+                target="_blank">edinburghhoppers@gmail.com</a> to find out more!</h4>
+    
+        <h5>Here's a link to our Privacy Policy: <a href=https://docs.google.com/document/d/e/2PACX-1vRrL_lUd2H3yWSkdJgk2mYtdJggG0C6g8P3L-EFd2OhIvIiHNPs1qzUEH7vLF8RmYCsos466z9-7-HY/pub>Privacy Policy</a></h5>
+    </div>
+    </div>
+    </div>
+</ul>
