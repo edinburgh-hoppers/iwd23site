@@ -81,7 +81,7 @@ nav{
     &:hover{
       text-decoration: none;
       color: $indigo;
-      background-color: $sunglow;
+      background-color: $lighter-purple;
       transition: background-color 0.1s;
       // text-shadow: 1px 1px 0px #aaa;
     }
@@ -92,7 +92,7 @@ nav{
     &:hover{
       text-decoration: none;
       color: $indigo;
-      background-color: $sunglow;
+      background-color: $lighter-purple;
       transition: background-color 0.1s;
     }
   }
@@ -103,7 +103,7 @@ nav{
     width: 90px;
     justify-self: center;
     border-radius: 50%;
-    box-shadow: 0px 0px 0px 5px $sunglow;
+    box-shadow: 0px 0px 0px 5px $lighter-purple;
   }
 
   @media (max-width: 555px) {
@@ -175,7 +175,7 @@ nav{
 
   a:hover{
     text-decoration: none;
-    box-shadow: 0 0 0px 2px $sunglow;
+    box-shadow: 0 0 0px 2px $lighter-purple;
     transition: box-shadow 100ms;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -318,7 +318,7 @@ nav{
 
   a:hover{
     text-decoration: none;
-    box-shadow: 0 0 0px 2px $sunglow;
+    box-shadow: 0 0 0px 2px $lighter-purple;
     transition: box-shadow 100ms;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -462,7 +462,7 @@ nav{
     
     a:hover {
       text-decoration: none;
-      box-shadow: 0 0 0px 2px $sunglow;
+      box-shadow: 0 0 0px 2px $lighter-purple;
       transition: box-shadow 100ms;
       border-top-left-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -512,7 +512,7 @@ nav{
       
       a:hover {
         text-decoration: none;
-        box-shadow: 0 0 0px 2px $sunglow;
+        box-shadow: 0 0 0px 2px $lighter-purple;
         transition: box-shadow 100ms;
         border-top-left-radius: 10px;
         border-bottom-right-radius: 10px;
