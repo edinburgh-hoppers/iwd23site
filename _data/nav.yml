@@ -2,12 +2,20 @@
   href: "#about"
   left: yes
 
-- text: "Sponsors"
-  href: "#sponsors"
+- text: "Speakers"
+  href: "#speakers"
   left: yes
 
 - text: "Schedule"
   href: "#schedule"
+  left: yes
+
+- text: "Sponsors"
+  href: "#sponsors"
+  right: yes
+
+- text: "Location"
+  href: "#location"
   right: yes
 
 - text: "FAQ"
