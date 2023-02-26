@@ -9,6 +9,7 @@ $lighter-purple: rgb(236, 223, 246);
 $sunglow: #ffcb0eff;
 $princeton-orange: #fd8835ff;
 $light-grey: rgb(249, 249, 249);
+$purple: rgb(169, 56, 255);
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
 
@@ -258,7 +259,7 @@ nav{
   }
 
   .eventTitle{
-    color: $princeton-orange;
+    color: $purple;
   }
 
   hr{
@@ -268,7 +269,7 @@ nav{
   .row{
     padding: 5px 0;
     &:hover{
-      background-color: rgba($sunglow, 0.08);
+      background-color: rgba($lighter-purple, 0.5);
     }
   }
 
