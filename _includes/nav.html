@@ -4,7 +4,7 @@
   <div class="left">
   {% for item in nav-items %}
     {% if item.left %}
-      <a href='{{ item.href }}'>{{ item.text }}</a>
+      <a href='{{ item.href }}'>{{<b>item.text</b>}}</a>
     {% endif %}
   {% endfor %}
 </div>
