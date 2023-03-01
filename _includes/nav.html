@@ -4,7 +4,7 @@
   <div class="left">
   {% for item in nav-items %}
     {% if item.left %}
-      <a href='{{ item.href }}'>{{<b>item.text</b>}}</a>
+      <a href='{{ item.href }}' style = 'font-weight: bold'>{{item.text}}</a>
     {% endif %}
   {% endfor %}
 </div>
@@ -12,7 +12,7 @@
 <div class="right">
   {% for item in nav-items %}
     {% if item.right %}
-      <a href='{{ item.href }}'>{{ item.text }}</a>
+      <a href='{{ item.href }}' style = 'font-weight: bold'>{{ item.text }}</a>
     {% endif %}
   {% endfor %}
 </div>
