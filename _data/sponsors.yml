@@ -8,10 +8,10 @@
   website: https://careers.bloomberg.com/job/search/
   width: 220px
 
-- name: Codeplay
-  logo: codeplay.png
-  website: https://codeplay.com/company/careers/
-  width: 220px
+#- #name: Codeplay
+  #logo: codeplay.png
+ # website: https://codeplay.com/company/careers/
+ # width: 220px
 
 - name: Huawei
   logo: huawei.png
